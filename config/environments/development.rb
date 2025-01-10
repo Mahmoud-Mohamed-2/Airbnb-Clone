@@ -40,20 +40,20 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
 
   # Mailer configuration for development environment.
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { host: "localhost", port: 3000 }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:              'smtp.gmail.com',
+    address:              "smtp.gmail.com",
     port:                 587,
-    domain:               'localhost',
+    domain:               "localhost",
     user_name:            "mahmoudfalous@gmail.com",
-    password:             'wsjo xhvi szoh xbee',
-    authentication:       'plain',
+    password:             "wsjo xhvi szoh xbee",
+    authentication:       "plain",
     enable_starttls_auto: true
   }
 
   # Ensure emails are sent with the correct 'From' address.
-  config.action_mailer.default_options = { from: 'mahmoudfalous@gmail.com' }
+  config.action_mailer.default_options = { from: "mahmoudfalous@gmail.com" }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

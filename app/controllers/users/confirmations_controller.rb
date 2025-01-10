@@ -11,7 +11,7 @@ class Users::ConfirmationsController < Devise::ConfirmationsController
   # POST /resource/confirmation
   def create
     # Extract the confirmation parameters (email and token)
-    confirmation_params = params.require(:confirmation).permit( :token)
+    confirmation_params = params.require(:confirmation).permit(:token)
 
     # Send confirmation instructions to the resource
     self.resource = resource_class.send_confirmation_instructions(confirmation_params)
@@ -67,6 +67,6 @@ class Users::ConfirmationsController < Devise::ConfirmationsController
   # end
   #
   def translation_scope
-    'devise.confirmations'
+    "devise.confirmations"
   end
 end

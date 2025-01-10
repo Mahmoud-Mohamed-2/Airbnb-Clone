@@ -5,7 +5,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   skip_before_action :verify_authenticity_token
 
   def google_oauth2
-    auth = request.env['omniauth.auth']
+    auth = request.env["omniauth.auth"]
     user = User.from_omniauth(auth)
 
     if user.persisted?
@@ -18,6 +18,6 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def failure
-    render json: { error: 'Authentication failed' }, status: :unauthorized
+    render json: { error: "Authentication failed" }, status: :unauthorized
   end
 end

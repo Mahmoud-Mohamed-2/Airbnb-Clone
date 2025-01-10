@@ -4,7 +4,7 @@ class ApplicationController < ActionController::API
   private
 
   def set_headers
-    response.set_header('Cross-Origin-Opener-Policy', 'same-origin-allow-popups')
-    response.set_header('Cross-Origin-Embedder-Policy', 'require-corp')
+    response.set_header("Cross-Origin-Opener-Policy", "same-origin-allow-popups")
+    response.set_header("Cross-Origin-Embedder-Policy", "require-corp")
   end
 end

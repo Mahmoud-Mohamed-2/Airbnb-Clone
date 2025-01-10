@@ -11,7 +11,7 @@ class User < ApplicationRecord
          :validatable,
          :jwt_authenticatable, jwt_revocation_strategy: self
 
-  devise :omniauthable, omniauth_providers: [:google_oauth2]
+  devise :omniauthable, omniauth_providers: [ :google_oauth2 ]
 
   validates :first_name, presence: true
   validates :last_name, presence: true
@@ -40,7 +40,7 @@ class User < ApplicationRecord
       errors.add(:avatar, "is too big. Max size is 1MB.")
     end
 
-    acceptable_types = ["image/jpeg", "image/png", "image/jpg"]
+    acceptable_types = [ "image/jpeg", "image/png", "image/jpg" ]
     unless acceptable_types.include?(avatar.content_type)
       errors.add(:avatar, "must be a JPEG, PNG, or JPG.")
     end

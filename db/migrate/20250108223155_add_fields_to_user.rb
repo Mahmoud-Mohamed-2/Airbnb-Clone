@@ -4,6 +4,5 @@ class AddFieldsToUser < ActiveRecord::Migration[8.0]
       t.string :provider
       t.string :uid
     end
-
   end
 end

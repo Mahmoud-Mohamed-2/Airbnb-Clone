@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: {
-    sessions: 'users/sessions',
-    registrations: 'users/registrations',
-    passwords: 'users/passwords',
-  confirmations: 'users/confirmations',
-  omniauth_callbacks: 'users/omniauth_callbacks'
+    sessions: "users/sessions",
+    registrations: "users/registrations",
+    passwords: "users/passwords",
+  confirmations: "users/confirmations",
+  omniauth_callbacks: "users/omniauth_callbacks"
     # We don't need confirmations here, since it's handled in api/v1
   }
   # post 'google_sign_in/callback', to: 'users/omniauth_callbacks#google_oauth2'
@@ -14,7 +14,7 @@ Rails.application.routes.draw do
       # resources :passwords, only: [:create, :update]
 
       # Get the current logged-in user
-      get 'current_user', to: 'users#get_current_user'
+      get "current_user", to: "users#get_current_user"
       # Referring to Api::V1::ConfirmationsController
     end
   end
