@@ -53,4 +53,4 @@ end
 # Uncomment for any additional tools if needed
 # gem "figaro", "~> 1.2" # For environment variables management
 
-gem "rubocop", "~> 1.69"
+gem "rubocop", "~> 1.70"
